@@ -6,8 +6,7 @@ class Montelimar < Formula
   version "0.1.0"
 
   def install
-    app_path = buildpath/"Montelimar.app"
-    raise "Montelimar.app not found!" unless app_path.directory?
-    prefix.install app_path
+    raise "Expected Montelimar.app to exist!" unless File.directory?("Montelimar.app")
+    prefix.install "Montelimar.app"
   end
 end
