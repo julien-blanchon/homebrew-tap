@@ -1,4 +1,4 @@
-class Montelimar < Formula
+class montelimar < Formula
     desc "AI-powered desktop app built with Tauri"
     homepage "https://github.com/julien-blanchon/Montelimar"
     url "https://github.com/julien-blanchon/Montelimar/releases/download/app-v0.1.0/Montelimar_aarch64.app.tar.gz"
