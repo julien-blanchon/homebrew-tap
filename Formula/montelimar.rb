@@ -7,7 +7,7 @@ class Montelimar < Formula
 
   def install
     app_path = buildpath/"Montelimar.app"
-    raise "Montelimar.app not found!" unless app_path.exist?
+    raise "Montelimar.app not found!" unless app_path.directory?
     prefix.install app_path
   end
 end
