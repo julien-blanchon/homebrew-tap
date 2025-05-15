@@ -6,7 +6,8 @@ class Montelimar < Formula
     version "0.1.0"
   
     def install
-      bin.install "Montelimar.app"
+      app_path = Dir["*/Montelimar.app"].first
+      prefix.install app_path
     end
   end
   
