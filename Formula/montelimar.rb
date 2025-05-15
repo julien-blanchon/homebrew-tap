@@ -6,7 +6,8 @@ class Montelimar < Formula
     version "0.1.0"
   
     def install
-      app_path = Dir["*/Montelimar.app"].first
+      app_path = Dir["Montelimar.app", "*/Montelimar.app"].first
+      raise "Montelimar.app not found in archive!" if app_path.nil?
       prefix.install app_path
     end
   end
