@@ -1,6 +1,6 @@
 cask "montelimar" do
   version "0.2.0"
-  sha256 "44572b7ef480420edd348d33e2727206eb47365ca15c7cbb925db4ee0647d8ac"
+  sha256 "f7064e3a462af8649f7155fe8329b2f9a13b4ca27c75d172d677004e62843cb7"
 
   url "https://github.com/julien-blanchon/Montelimar/releases/download/app-v0.2.0/Montelimar_aarch64.app.tar.gz",
       verified: "github.com/julien-blanchon/Montelimar/"
