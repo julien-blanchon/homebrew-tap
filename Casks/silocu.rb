@@ -1,8 +1,8 @@
 cask "silocu" do
-  version "1.3.1"
-  sha256 "1cfebe643d2de763eee6290b377ff7d16467b3cd0ba635544e1ae1e963c43c9c"
+  version "1.4.0"
+  sha256 "5ff61dac97db6e8a6862af840181cea9ef66094ccf08482de9f84c0c6e09cc99"
 
-  url "https://github.com/julien-blanchon/silo/releases/download/v1.3.1/silo_aarch64.app.tar.gz",
+  url "https://github.com/julien-blanchon/silo/releases/download/v1.4.0/silo_aarch64.app.tar.gz",
       verified: "github.com/julien-blanchon/silo/"
 
   name "silocu"
