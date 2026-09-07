@@ -14,9 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Generate formula from the latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p Formula
-          python3 scripts/update-jcodex.py > Formula/jcodex.rb
+          tag=$(gh api repos/julien-blanchon/jcodex/releases/latest --jq .tag_name)
+          python3 scripts/update-jcodex.py "$tag" > Formula/jcodex.rb
           ruby -c Formula/jcodex.rb
       - name: Commit formula update
         run: |
