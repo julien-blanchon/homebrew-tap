@@ -1,0 +1,28 @@
+name: Update jcodex
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: update-jcodex
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - name: Generate formula from the latest release
+        run: |
+          mkdir -p Formula
+          python3 scripts/update-jcodex.py > Formula/jcodex.rb
+          ruby -c Formula/jcodex.rb
+      - name: Commit formula update
+        run: |
+          git add Formula/jcodex.rb
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Update jcodex release'
+          git push
