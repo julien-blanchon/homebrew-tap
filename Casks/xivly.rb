@@ -1,6 +1,6 @@
 cask "xivly" do
-  version "0.1.0"
-  sha256 "0d89c7c1a548d6d1924a28c96d940e1a7ea95a93fe06a08b679d3f1f46fb01d8"
+  version "0.1.1"
+  sha256 "57cc77a22aef003a2ff20b82f59886f7edab1e4858d58fa59f6261d3e8a43c4e"
 
   url "https://github.com/julien-blanchon/xivly/releases/download/v#{version}/Xivly_#{version}_universal.dmg",
       verified: "github.com/julien-blanchon/xivly/"
@@ -11,11 +11,6 @@ cask "xivly" do
   depends_on macos: ">= :tahoe"
 
   app "Xivly.app"
-
-  # Ad-hoc signed build: clear the quarantine flag so Gatekeeper lets it open.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Xivly.app"]
-  end
 
   # App state only; your library folder is never touched.
   zap trash: [
