@@ -2,8 +2,7 @@ cask "xivly" do
   version "0.2.0"
   sha256 "4d3b841184edc3db989988273d03a7914a447d44e584566310199a4708f14922"
 
-  url "https://github.com/julien-blanchon/xivly/releases/download/v#{version}/Xivly_#{version}_universal.dmg",
-      verified: "github.com/julien-blanchon/xivly/"
+  url "https://github.com/julien-blanchon/xivly/releases/download/v#{version}/Xivly_#{version}_universal.dmg"
   name "Xivly"
   desc "Research paper reader, annotator and library, without distraction"
   homepage "https://github.com/julien-blanchon/xivly"
