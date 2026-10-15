@@ -1,6 +1,6 @@
 cask "xivly" do
-  version "0.8.0"
-  sha256 "40a4044c8facb26eaf641ffa94afd29fd929029197dd72e5505098a2b24066b4"
+  version "0.9.0"
+  sha256 "1b1b8e06fe719d57695a699081180fd627e0b1431e050d6521b2ff243ae67bc3"
 
   url "https://github.com/julien-blanchon/xivly/releases/download/v#{version}/Xivly_#{version}_universal.dmg"
   name "Xivly"
