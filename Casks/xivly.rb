@@ -7,8 +7,6 @@ cask "xivly" do
   desc "Research paper reader, annotator and library, without distraction"
   homepage "https://github.com/julien-blanchon/xivly"
 
-  depends_on macos: :tahoe
-
   app "Xivly.app"
 
   # App state only; your library folder is never touched.
